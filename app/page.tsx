@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Nav from "./Header/Nav";
-import LandingPage from "../app/landingpage/page";
-import Section2 from "./section2/page";
-import Section3 from "./section3/page";
-import Section4 from "./section4/page";
+import LandingPage from "./landingpage/landing-page";
+import Section2 from "./section2/section2";
+import Section3 from "./section3/section3";
+import Section4 from "./section4/section4";
+import Footer from "./Footer/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Section3 />
         <Section4 />
       </main>
+      <Footer/>
     </>
   );
 }
