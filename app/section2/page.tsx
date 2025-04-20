@@ -27,7 +27,7 @@ const cards = [
 
 export default function Section2() {
   return (
-    <div className="pb-24">
+    <div id="about" className="pb-24">
       {/* Header section */}
       <div className="flex justify-between">
         <h1 className="font-medium leading-[44px] text-[40px]">

@@ -29,7 +29,7 @@ const cards = [
 
 export default function Section3() {
   return (
-    <div className="pb-24">
+    <div id="services" className="pb-24">
       {/* Header section */}
       <div className="flex flex-col justify-center">
         <h1 className="font-medium leading-[44px] text-[40px] text-center">
