@@ -47,7 +47,7 @@ export default function Nav() {
       </div>
 
       <div>
-        <Link href="/contact">
+        <Link href="/contactus">
           <button className="bg-[#007BFF] rounded-[4px] py-[12px] px-[32px] cursor-pointer text-white">
             Contact us
           </button>

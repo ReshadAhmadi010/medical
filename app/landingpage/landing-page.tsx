@@ -2,11 +2,8 @@ import React from "react";
 import Image from "next/image";
 import medicalImage from "@/public/images/medical.svg";
 import human from "@/public/images/human.svg";
-import { Hanuman } from "next/font/google";
 import shapes from "@/public/images/shapes.svg";
 import shapeR from "@/public/images/shapeR.svg";
-
-// import { Star } from "@heroicons/react/solid"; // Example import from Heroicons
 
 export default function Landingpage() {
   return (
@@ -73,7 +70,6 @@ export default function Landingpage() {
               className="object-contain"
             />
 
-            {/* <Star className="text-amber-400 w-[24px] h-[24px]" /> */}
             <span>4.8/Rating</span>
           </div>
         </div>

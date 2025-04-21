@@ -31,7 +31,7 @@ export default function Section4() {
   };
 
   return (
-    <div className="text-center p-4">
+    <div id="faqs" className="text-center p-4">
       <div className="flex gap-3 justify-center my-4">
         <button className="bg-blue-500 text-white px-6 py-3 rounded flex items-center gap-2 hover:bg-blue-600 transition-colors">
           Learn More <ArrowRight size={16} />
@@ -48,19 +48,22 @@ export default function Section4() {
       <div className="max-w-xl mx-auto">
         {questions.map((item, index) => (
           <div key={index} className="mb-4">
-            {/* Question row - always visible */}
-            <div
-              className="flex items-center p-3 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => toggleQuestion(index)}
-            >
-              <span className="text-blue-500 font-bold mr-3 text-xl w-6 flex-shrink-0">
+            {/* Question row - only icon is clickable */}
+            <div className="flex items-center p-3 rounded-lg">
+              <button
+                onClick={() => toggleQuestion(index)}
+                className="text-blue-500 font-bold mr-3 text-xl w-6 flex-shrink-0 focus:outline-none"
+                aria-expanded={expandedIndex === index}
+                aria-controls={`answer-${index}`}
+              >
                 {expandedIndex === index ? "−" : "+"}
-              </span>
+              </button>
               <p className="font-medium text-left">{item.question}</p>
             </div>
 
-            {/* Answer - appears below */}
+            {/* Answer section */}
             <div
+              id={`answer-${index}`}
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
                 expandedIndex === index ? "max-h-96" : "max-h-0"
               }`}
